@@ -135,32 +135,7 @@ class MaterialActivity : AppCompatActivity() {
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun MaterialCardComponent() {
-    // Card composable is a predefined composable that is meant to represent the card surface as
-    // specified by the Material Design specification. We also configure it to have rounded
-    // corners and apply a modifier.
-
-    // You can think of Modifiers as implementations of the decorators pattern that are used to
-    // modify the composable that its applied to. In the example below, we add a padding of
-    // 8dp to the Card composable.
-    Card(shape = RoundedCornerShape(4.dp), modifier = Modifier.padding(8.dp)) {
-        // ListItem is a predefined composable that is a Material Design implementation of [list
-        // items](https://material.io/components/lists). This component can be used to achieve the
-        // list item templates existing in the spec
-        ListItem(text = {
-            Text(text = "Title")
-        }, secondaryText = {
-            Text(text = "Subtitle")
-        }, icon = {
-            // Column is a composable that places its children in a vertical sequence. You
-            // can think of it similar to a LinearLayout with the vertical orientation. 
-            // In addition we also pass a few modifiers to it.
-            Column(
-                modifier = Modifier
-                    .width(48.dp)
-                    .height(48.dp)
-            ) 
-        })
-    }
+    
 }
 
 // We represent a Composable function by annotating it with the @Composable annotation. Composable
