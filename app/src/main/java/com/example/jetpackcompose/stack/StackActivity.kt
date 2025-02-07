@@ -18,7 +18,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcompose.R
 import com.example.jetpackcompose.image.LocalResourceImageComponent
 
 class StackActivity : AppCompatActivity() {
@@ -51,7 +50,7 @@ fun StackComponent() {
     Box(modifier = Modifier.fillMaxWidth().height(200.dp)) {
         // LocalResourceImageComponent is a composable that takes in an image resource id and
         // display it on the screen. Take a look at its implementation to learn more.
-        LocalResourceImageComponent(resId = R.drawable.landscape)
+        //LocalResourceImageComponent(resId = R.drawable.landscape)
         // Surface is a composable provided to fulfill the needs of the "Surface" metaphor from the
         // Material Design specification. It's generally used to change the background color, add
         // elevation, clip or add background shape to its children composables.
