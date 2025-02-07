@@ -75,7 +75,7 @@ fun LazyListScope.displayImagesComponent() {
     // for a single element in the list
     item {
         TitleComponent("Load image from the resource folder")
-        LocalResourceImageComponent(R.drawable.landscape)
+        //LocalResourceImageComponent(R.drawable.landscape)
     }
 
     item {
@@ -94,7 +94,7 @@ fun LazyListScope.displayImagesComponent() {
 
     item {
         TitleComponent("Image with rounded corners")
-        ImageWithRoundedCorners(R.drawable.landscape)
+       // ImageWithRoundedCorners(R.drawable.landscape)
     }
 }
 
