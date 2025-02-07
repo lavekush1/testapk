@@ -21,7 +21,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
-import com.example.jetpackcompose.R
 
 class ZoomableActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,20 +81,7 @@ fun ZoomableComposable() {
         // There are multiple methods available to load an image resource in Compose. 
         // However, it would be advisable to use the painterResource method as it loads
         // an image resource asynchronously
-        val imagepainter = painterResource(id = R.drawable.landscape)
-        // Image is a pre-defined composable that lays out and draws a given [ImageBitmap].
-        // We use the graphicsLayer modifier to modify the scale & translation of the image.
-        // This is read from the state properties that we created above.
-        Image(
-            modifier = Modifier.fillMaxSize().graphicsLayer(
-                scaleX = scale,
-                scaleY = scale,
-                translationX = offsetX,
-                translationY = offsetY
-            ),
-            painter = imagepainter,
-            contentDescription = "Landscape Image"
-        )
+        
     }
 }
 
