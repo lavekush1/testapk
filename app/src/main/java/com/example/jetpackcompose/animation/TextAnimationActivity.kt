@@ -36,7 +36,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.example.jetpackcompose.R
 
 class TextAnimationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -129,38 +128,7 @@ fun TextAnimationComponent() {
 fun ComposeLogoComponent() {
     // There are multiple methods available to load an image resource in Compose. However, it would
     // be advisable to use the painterResource method as it loads an image resource asynchronously
-    val image = ImageBitmap.imageResource(R.drawable.compose_logo)
-
-    // rememberInfiniteTransition is used to create a transition that uses infitine
-    // child animations. Animations typically get invoked as soon as they enter the
-    // composition so don't need to be explicitly started.
-    val infiniteTransition = rememberInfiniteTransition()
-    // Create a value that is altered by the transition based on the configuration. We use
-    // the animated float value the returns and updates a float from the initial value to
-    // target value and repeats it (as its called on the infititeTransition).
-    val rotation by infiniteTransition.animateFloat(
-        initialValue = 0f,
-        targetValue = 360f,
-        animationSpec = infiniteRepeatable(
-            animation = tween<Float>(
-                durationMillis = 3000,
-                easing = FastOutLinearInEasing,
-            ),
-        )
-    )
-
-    // You can think of Modifiers as implementations of the decorators pattern that are
-    // used to modify the composable that its applied to. In this example, we configure the
-    // Image composable to have a height of 48 dp.
-    Canvas(Modifier.size(48.dp)) {
-        // As the Transition is changing the interpolating the value of the animated float
-        // "rotation", you get access to all the values including the intermediate values as
-        // its  being updated. The value of "rotation" goes from 0 to 360 and transitions
-        // infinitely due to the infiniteRepetable animationSpec used above.
-        rotate(rotation) {
-            drawImage(image)
-        }
-    }
+    
 }
 
 
