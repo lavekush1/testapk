@@ -376,5 +376,5 @@ fun NetworkImageComponentGlidePreview() {
 @Preview("Add round corners to an image")
 @Composable
 fun ImageWithRoundedCornersPreview() {
-    ImageWithRoundedCorners(R.drawable.landscape)
+    //ImageWithRoundedCorners(R.drawable.landscape)
 }
