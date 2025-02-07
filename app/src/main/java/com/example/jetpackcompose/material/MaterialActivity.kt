@@ -44,7 +44,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.jetpackcompose.R
 import com.example.jetpackcompose.image.TitleComponent
 
 class MaterialActivity : AppCompatActivity() {
@@ -63,12 +62,7 @@ class MaterialActivity : AppCompatActivity() {
             LazyColumn {
                 // item is a DSL available in the LazyColumn scope. This allows you to render a composable
                 // for a single element in the list
-                item {
-                    // Title Component is a custom composable that we created which is capable of
-                    // rendering text on the screen in a certain font style & text size.
-                    TitleComponent("This is a simple Material card")
-                    MaterialCardComponent()
-                }
+               
 
                 item {
                     TitleComponent("This is a loading progress indicator ")
@@ -164,12 +158,7 @@ fun MaterialCardComponent() {
                 modifier = Modifier
                     .width(48.dp)
                     .height(48.dp)
-            ) {
-                Image(
-                    painter = painterResource(R.drawable.landscape),
-                    contentDescription = "Landscape"
-                )
-            }
+            ) 
         })
     }
 }
