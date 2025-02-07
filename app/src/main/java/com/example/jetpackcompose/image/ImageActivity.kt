@@ -45,7 +45,6 @@ import androidx.compose.ui.unit.sp
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.example.jetpackcompose.R
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Target
 
@@ -359,9 +358,7 @@ fun Modifier.RoundedCornerClipModifier(size: Dp): Modifier = composed {
 @Preview("Load image stored in local resources folder")
 @Composable
 fun LocalResourceImageComponentPreview() {
-    Column {
-        LocalResourceImageComponent(R.drawable.landscape)
-    }
+    
 }
 
 @Preview("Load an image over the network using the Picasso library")
