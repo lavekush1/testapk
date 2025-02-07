@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.jetpackcompose.R
 import com.example.jetpackcompose.image.TitleComponent
 
 class ConstraintLayoutActivity : AppCompatActivity() {
@@ -150,10 +149,7 @@ fun SimpleConstraintLayoutComponent() {
                         // and add a margin of 16dp
                         start.linkTo(parent.start, margin = 16.dp)
                     }
-            ) {
-                // Image is a pre-defined composable that lays out and draws a given [ImageBitmap].
-                Image(painterResource(R.drawable.landscape), contentDescription = null)
-            }
+            ) 
         }
     }
 }
